@@ -2,8 +2,20 @@
 {% load static %}
 {% block content%}
 <div class="container-fluid" id="home">
-    <br>
-    <h1>Hello</h1>
+{% if messages %}
+
+
+        {% for message in messages %}
+
+    <div class="alert alert-danger" role="alert">
+  {{ message }}
+        </div>
+
+        {% endfor %}
+
+
+
+{% endif %}
 
 
 </div>
